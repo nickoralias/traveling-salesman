@@ -85,7 +85,7 @@ void ts(int depth, int tid)
 			}
 		}	
 	}
-	else if (my_dist[tid] <= min_dist)
+	else if ((my_dist[tid] <= min_dist) || (depth > num/2))
 	{
 		tid = omp_get_thread_num();
 		for (i = 1; i < depth; i++)
